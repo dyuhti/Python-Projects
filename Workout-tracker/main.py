@@ -1,15 +1,15 @@
 import requests
 from datetime import datetime
-APP_ID = "508ec464"
-APP_KEY = "38c40825e4b0349b8a3c666db211e27d"
+APP_ID = "***"
+APP_KEY = "****"
 GENDER = "female"
 WEIGHT_KG = 60
 HEIGHT_CM = 170
-AGE = 17
+AGE = 23
 
 #endpoint
 exercise_endpoint = " https://trackapi.nutritionix.com/v2/natural/exercise"
-sheety_address_endpoint = "https://api.sheety.co/55078ded0aeac2feb7eb12be08f421b9/workoutTracking/workouts"
+sheety_address_endpoint = "https://api.sheety.co/****/workoutTracking/workouts"
 
 headers = {
     "x-app-key": APP_KEY,
@@ -46,12 +46,6 @@ for exercise in result["exercises"]:
     }
     }
 
-# Authentication
-# sheet_response = requests.post(sheety_address_endpoint, json=sheety_inputs,
-#   auth=(
-#       "Dyuthi",
-#       "atm29562",
-#   )
-#)
+
 sheety_response = requests.post(url=sheety_address_endpoint, json=sheety_inputs)
 print(sheety_response.text)
