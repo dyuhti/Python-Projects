@@ -5,9 +5,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
 CHROME_DIVER_PATH = "C:\Development\chromedriver.exe"
-SIMILAR_ACCOUNT = "chefsteps"
-USERNAME = "pythonlearner962"
-PASSWORD = "5)'2ZAW)QiTyD$M"
+SIMILAR_ACCOUNT = "acc_name"
+USERNAME = "***"
+PASSWORD = "***"
 
 
 class InstaFollower:
