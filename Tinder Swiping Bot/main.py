@@ -4,12 +4,12 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
 
-EMAIL = "pythonlearner962@gmail.com"
-PASSWORD = "ATM29562"
+EMAIL = "***"
+PASSWORD = "***"
 
 chrome_driver_path = Service("C:\Development\chromedriver.exe")
 driver = webdriver.Chrome(service=chrome_driver_path)
-driver.get("https://tinder.onelink.me/9K8a/3d4abb81")
+driver.get("https://tinder.onelink.me/***/****")
 
 base_window = driver.current_window_handle
 time.sleep(4)
