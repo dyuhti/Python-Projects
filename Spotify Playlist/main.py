@@ -6,11 +6,11 @@ import pprint
 from spotipy.oauth2 import SpotifyClientCredentials
 from spotipy.oauth2 import SpotifyOAuth
 
-CLIENT_ID = "9fd7a3cd4db745e799ba4351b39ef13e"
-CLIENT_SECRET = "be65edb258874f4f9e95a815c0427c12"
+CLIENT_ID = "***"
+CLIENT_SECRET = "***"
 URI_REDIRECT = "https://example.com"
-ID = "AQDmSZUw9mKI9ASOaTl8HFd04N41GUD1-Isag39K1FLdkZYHWf7Ga17hicdg2c5j-dWkhsEVirva4aBrBeENVIKTiHtLTV1WamI1Njul_E-FVGH4S3IRDBgRuKrmo5zLJu12IqYEZd_Ul4WNc8eOyYpG3GPrAuvb659XXNJNuIQF0WzoN2qse3hH4nOxJQiv"
-# #https://example.com/?code=AQDmSZUw9mKI9ASOaTl8HFd04N41GUD1-Isag39K1FLdkZYHWf7Ga17hicdg2c5j-dWkhsEVirva4aBrBeENVIKTiHtLTV1WamI1Njul_E-FVGH4S3IRDBgRuKrmo5zLJu12IqYEZd_Ul4WNc8eOyYpG3GPrAuvb659XXNJNuIQF0WzoN2qse3hH4nOxJQiv
+ID = "***"
+
 
 
 response = requests.get("https://www.billboard.com/charts/hot-100/2000-08-12/")
