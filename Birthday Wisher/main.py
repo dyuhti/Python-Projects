@@ -1,8 +1,8 @@
 import datetime as dt
 import smtplib
 import random
-MY_EMAIL = "Dyuthipyhton1@gmail.com"
-MY_PASSWORD = "sxcjwayflqtuhvym"
+MY_EMAIL = "*****"
+MY_PASSWORD = "*****"
 
 
 now = dt.datetime.now()
