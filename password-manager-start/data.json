@@ -1,38 +1,7 @@
 {
     "wer": {
-        "email": "dd@gmail.com",
-        "password": "2c&8lgw8Z1we%ij$$"
+        "email": "email@gmail.com",
+        "password": "****"
     },
-    "wd": {
-        "email": "we@gmail.com",
-        "password": "w*p%y6djd!h5g1E&R"
-    },
-    "Wifi ": {
-        "email": "nelavalliswathi@gmail.com",
-        "password": "Yogendra1983"
-    },
-    "Wifi home": {
-        "email": "nelavalliswathi@gmail.com",
-        "password": "Yogendra1983"
-    },
-    "new_gmail_account": {
-        "email": "Dyuthipyhton1@gmail.com",
-        "password": "uDP5MDU6e*(6MK"
-    },
-    "new_yahoo_account": {
-        "email": "epyhtontest2@yahoo.com",
-        "password": "gcUaj4*%s55r)Bt8)v"
-    },
-    "weather for python": {
-        "email": "saisridyuthi@gmail.com",
-        "password": "kHw7gfG0(%2aAP9+)"
-    },
-    "twilio account signup": {
-        "email": "saisridyuthi@gmail.com",
-        "password": "#xh(sB0%eF2Trxj1"
-    },
-    "news_apt": {
-        "email": "saisridyuthi@gmail.com",
-        "password": "eA+9&UgNHN66Ql*3"
-    }
+   
 }
