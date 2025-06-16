@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ISS Tracker</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('{{ url_for("static", filename="issimg.png") }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 200vh;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    .content {
+      position: absolute;
+      top: 5%;
+      right: 10%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .heading {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .city {
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .city h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .city input[type="text"] {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+      width: 350px;
+      margin-bottom: 1rem;
+    }
+
+    .city button {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      border: none;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .city button:hover {
+      background-color: #45a049;
+    }
+
+    .result_container {
+      position: absolute;
+      top: 45%;
+      right: 10%;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      width: 440px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1s ease-in-out, visibility 0s 1s;
+    }
+
+    .result_container.show {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="heading">
+      <h1>ISS Tracker</h1>
+    </div>
+    <p>Check if the International Space Station is overhead.</p>
+  </div>
+
+  <form method="POST" id="issForm">
+    <div class="city">
+      <h2>Enter the city name</h2>
+      <input id="city-input" name="city" type="text" placeholder="e.g., New York" style="width: 350px; padding: 0.5rem; border-radius: 5px;" required />
+      <br><br>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <div class="result_container" id="resultContainer">
+    <h3>{{ result }}</h3>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('issForm');
+      const resultContainer = document.getElementById('resultContainer');
+
+      // Check if the form was submitted (page reloaded with result)
+      const urlParams = new URLSearchParams(window.location.search);
+      const formSubmitted = urlParams.has('submitted');
+
+      if (formSubmitted && "{{ result }}".trim() !== "") {
+        resultContainer.classList.add('show');
+      }
+
+      // Add submitted parameter to form action to track submission
+      form.addEventListener('submit', function() {
+        const action = form.getAttribute('action') || '';
+        form.setAttribute('action', action + (action.includes('?') ? '&' : '?') + 'submitted=true');
+      });
+    });
+  </script>
+</body>
+</html>
